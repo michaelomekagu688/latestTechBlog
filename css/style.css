@@ -1,0 +1,347 @@
+/* Reset & base styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fffdfb; 
+    color: #333;
+    margin: 0; 
+    padding: 0; 
+}
+
+h1, h2, h3, h4 { 
+    font-family: 'Playfair Display', serif; 
+}
+
+img { 
+    max-width: 100%; 
+    display: block; 
+    object-fit: cover; 
+}
+
+/* Navbar */ .navbar-brand { 
+    font-size: 1.8rem; 
+    font-weight: 700; 
+}
+
+.nav-link { 
+    color: #f8f9fa !important; 
+    margin-left: 1rem; 
+    transition: color 0.3s;
+ }
+
+.nav-link:hover { 
+    color: #ffc107 !important; 
+}
+
+/* Hero Section */ .hero-section { 
+    background: linear-gradient(
+        to right,
+         #0f2027, #203a43, #2c5364);
+    color: white; 
+    padding: 6rem 1rem;
+ }
+
+.hero-section h1 { 
+    font-size: 3rem; 
+    font-weight: 600; 
+}
+
+.hero-section .lead { 
+    font-size: 1.25rem; 
+}
+
+/* Sliders */ .slider-container { 
+    overflow: hidden; 
+    width: 100%; 
+    border-top: 2px solid #eee; 
+    border-bottom: 2px solid #eee; 
+}
+
+.slider-track { 
+    display: flex; 
+    width: max-content; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+    gap: 30px; 
+}
+
+.slider-track img { 
+    width: 300px; 
+    height: 400px; 
+    border-radius: 12px; 
+    transition: transform 0.3s; 
+}
+
+.slider-track img:hover { 
+    transform: scale(1.05); 
+}
+
+.group1 .slider-track { 
+    animation-name: scroll-left; 
+    animation-duration: 20s; 
+}
+
+.group2 .slider-track { 
+    animation-name: scroll-right; 
+    animation-duration: 24s;
+ }
+
+@keyframes scroll-left { 
+    0% { 
+        transform: translateX(0);
+     } 100% { 
+        transform: translateX(calc(-50%)); 
+    } 
+}
+
+@keyframes scroll-right { 
+    0% { 
+        transform: translateX(calc(-50%));
+     } 100% { 
+        transform: translateX(0);
+     }
+ }
+
+/* Info Sections */ .feature-card { 
+    background: white; 
+    border-left: 5px solid transparent;
+     border-radius: 8px; transition: all 0.3s; 
+     box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.feature-card:hover { 
+    border-left: 5px solid #c35817; 
+    background-color: #fff9f6; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+ }
+
+/* Tilted Card Effect */ .tiltes { 
+    background: white; 
+    border-radius: 1rem; 
+    transform: rotate(-1deg); 
+    z-index: 2;
+ }
+
+.stables {
+     background-color: #c35817;
+      border-radius: 1rem; 
+      z-index: 1; 
+      transform: rotate(1deg);
+}
+
+/* Buttons */ .btn-primary { 
+    background-color: #c35817; border: none;
+ }
+
+.btn-primary:hover {
+     background-color: #a64408;
+ }
+
+.btn-outline-primary { 
+    border-color: #c35817; 
+    color: #c35817; 
+}
+
+.btn-outline-primary:hover { 
+    background-color: #c35817; color: white;
+ }
+
+/* Responsive */ @media (max-width: 768px) {
+    .hero-section h1 { 
+        font-size: 2.25rem; 
+    } 
+    .slider-track img {
+        width: 200px;
+        height: 280px; 
+    } 
+ }
+
+
+ .wrapper-price-sec  {
+   text-align:center;
+   padding: 3rem 0;
+ }
+.wrapper-price-sec p{
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+}
+.wrapper-price-sec h2{
+    font-size: 3rem;
+}
+
+.toggle-container:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+   
+    
+}
+.toggle-container {
+  display: inline-flex;
+  border: 2px solid #a8460f;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+   transition: all .2s;
+
+}
+
+.toggle-button {
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #a8460f;
+  transition: background-color 0.3s, color 0.3s;
+}
+.toggle-button.active {
+  background-color: #a8460f;
+  color: white;
+}
+
+.pricing-card{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    width: 65%;
+    height: auto;
+    border: solid .5px #3d3d3d;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pricing-card .price{
+    font-size: 3rem;
+    font-family: 'Times New Roman';
+    display: flex;
+    font-weight: 550;
+    align-self: center;
+}
+.pricing-card p{
+    font-size: larger;
+    align-self: center;
+}
+
+.pricing-card .features{
+     position: relative;
+     transition: translate .2s;
+}
+
+.pricing-card .features li{
+    list-style: none;
+    margin: .5rem 0;
+    font-style: bold;
+}
+
+.choose-btn,
+.choice{
+    border-radius: 20px;
+    height: 2.5rem;
+    border: solid 3.5px #a8460f;
+    font-weight: 550;
+    transition: all .3s;
+}
+
+.choose-btn{
+     color:#a8460f;
+     background-color: #fff;
+}
+.choose-btn:hover {
+  background-color: #a8460f;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.choice{
+    background-color: #a8460f;
+  color: white;
+}
+.choice:hover{
+      color:#a8460f;
+     background-color: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.diffs{
+    background-color: #fbd2b2;
+}
+/* Custom styles for testimonial cards */
+.custom-card {
+    background: white; 
+    border: 5px solid transparent;
+     border-radius: 8px; transition: all 0.3s; 
+     box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.custom-card:hover {
+  transform: translateY(-4px);
+    background-color: #fff9f6; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.testimonial-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 10rem 0;
+}
+.testimonial-cont{
+    text-align: center;
+    width: 60%;
+    margin-bottom: 3rem;
+}
+.contact-prim{
+    margin-left: 8%;
+}
+.contact-cont{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.contact-cont > * ,
+.contact-prim > * {
+    margin: .8rem 0;
+}
+.contact-img{
+    width: 85%;
+    height: 35rem;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.one{
+      object-position:bottom;
+}
+.two{
+      object-position:center;
+}
+.contact-btn{
+    border-radius:20px;
+    width: 10rem;
+    height: auto;
+    text-align: center;
+    justify-self: center;
+}
+footer{
+    margin-top: 6rem;
+}
+
+footer a {
+  color: #333 !important;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #000 !important;
+}
+
+footer .nav-link{
+    color: black !important;
+    text-decoration: none;
+}
+footer .nav-link:hover{
+    color: black !important;
+    text-decoration: underline !important;
+}
+hr {
+  border-top: 1px solid #ccc;
+}
